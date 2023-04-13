@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>114 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第八周 0x02 “X‘NUCA 2020 unravelmfc”这应该是第八周第三道题，我记录一下我的做题过程，虽然有很多疑问首先查壳Unknown EXE，不知道是个啥写的，010看一下吧，没发现有python这样的字符存在，那就ida打开然后shift+f12先找字符串有一个个i_will_not_be_found,一看就是出题人放的，果断双击后x交叉引用 12345678910111213">
+<meta property="og:type" content="article">
+<meta property="og:title" content="114">
+<meta property="og:url" content="http://example.com/2023/04/13/114/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第八周 0x02 “X‘NUCA 2020 unravelmfc”这应该是第八周第三道题，我记录一下我的做题过程，虽然有很多疑问首先查壳Unknown EXE，不知道是个啥写的，010看一下吧，没发现有python这样的字符存在，那就ida打开然后shift+f12先找字符串有一个个i_will_not_be_found,一看就是出题人放的，果断双击后x交叉引用 12345678910111213">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://bbs.xdsec.org/assets/files/2023-04-10/1681115143-134913-image.png">
+<meta property="og:image" content="https://bbs.xdsec.org/assets/files/2023-04-10/1681115868-707561-image.png">
+<meta property="article:published_time" content="2023-04-13T12:42:01.000Z">
+<meta property="article:modified_time" content="2023-04-13T12:49:16.639Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bbs.xdsec.org/assets/files/2023-04-10/1681115143-134913-image.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-114" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/04/13/114/" class="article-date">
+  <time class="dt-published" datetime="2023-04-13T12:42:01.000Z" itemprop="datePublished">2023-04-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      114
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="第八周-0x02-“X‘NUCA-2020-unravelmfc”"><a href="#第八周-0x02-“X‘NUCA-2020-unravelmfc”" class="headerlink" title="第八周 0x02 “X‘NUCA 2020 unravelmfc”"></a>第八周 0x02 “X‘NUCA 2020 unravelmfc”</h3><p>这应该是第八周第三道题，我记录一下我的做题过程，虽然有很多疑问<br>首先查壳<br><img src="https://bbs.xdsec.org/assets/files/2023-04-10/1681115143-134913-image.png" alt="Image description"><br>Unknown EXE，不知道是个啥写的，010看一下吧，没发现有python这样的字符存在，那就ida打开<br>然后shift+f12先找字符串<br>有一个个<code>i_will_not_be_found</code>,一看就是出题人放的，果断双击后x交叉引用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">int sub_599C80()</span><br><span class="line">&#123;</span><br><span class="line">  int v0; // eax</span><br><span class="line">  int v1; // eax</span><br><span class="line">  int v2; // eax</span><br><span class="line">  int v3; // eax</span><br><span class="line">  unsigned int i; // [esp+118h] [ebp-54h]</span><br><span class="line">  size_t v6; // [esp+124h] [ebp-48h]</span><br><span class="line">  char *Str; // [esp+130h] [ebp-3Ch]</span><br><span class="line">  char v8[32]; // [esp+13Ch] [ebp-30h] BYREF</span><br><span class="line">  int v9; // [esp+168h] [ebp-4h]</span><br><span class="line"></span><br><span class="line">  v0 = sub_579EA4(&quot;i_will_not_be_found&quot;);</span><br><span class="line">  v1 = sub_5736A8(v0);</span><br><span class="line">  sub_5761A0(v1);</span><br><span class="line">  v9 = 0;</span><br><span class="line">  if ( !NtCurrentPeb()-&gt;BeingDebugged )</span><br><span class="line">  &#123;</span><br><span class="line">    v2 = sub_579EA4(&quot;you_can_not_find_me&quot;);</span><br><span class="line">    v3 = sub_5736A8(v2);</span><br><span class="line">    sub_56DE0B(v3);</span><br><span class="line">  &#125;</span><br><span class="line">  Str = (char *)sub_577203(v8);</span><br><span class="line">  v6 = j__strlen(Str);</span><br><span class="line">  for ( i = 0; i &lt; 0x292; ++i )</span><br><span class="line">    byte_875188[i] ^= Str[i % v6];//SMC</span><br><span class="line">  v9 = -1;</span><br><span class="line">  sub_571628(v8);</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好像是个SMC?先不管，交叉引用byte_875188看看谁调用了它<img src="https://bbs.xdsec.org/assets/files/2023-04-10/1681115868-707561-image.png" alt="Image description"><br>果然有，第二个双击跟进</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">bool __cdecl sub_599540(char *a1, unsigned int a2)</span><br><span class="line">&#123;</span><br><span class="line">  size_t v2; // eax</span><br><span class="line">  char v4; // [esp+Fh] [ebp-141h]</span><br><span class="line">  char Buf1[68]; // [esp+D4h] [ebp-7Ch] BYREF</span><br><span class="line">  unsigned int i; // [esp+118h] [ebp-38h]</span><br><span class="line">  int v7[8]; // [esp+124h] [ebp-2Ch] BYREF</span><br><span class="line">  __int16 v8; // [esp+144h] [ebp-Ch]</span><br><span class="line">  char v9; // [esp+146h] [ebp-Ah]</span><br><span class="line"></span><br><span class="line">  memset(v7, 0, sizeof(v7));</span><br><span class="line">  v8 = 0;</span><br><span class="line">  v9 = 0;</span><br><span class="line">  for ( i = 0; i &lt; a2; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    v4 = *a1++;</span><br><span class="line">    *((_BYTE *)v7 + i) = v4;</span><br><span class="line">  &#125;</span><br><span class="line">  sub_57971F(v7, a2);</span><br><span class="line">  ((void (__fastcall *)(char *, int *, unsigned int))byte_875188)(Buf1, v7, a2);</span><br><span class="line">  v2 = j__strlen(Str);</span><br><span class="line">  return j__memcmp(Buf1, Str, v2) == 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>emmmm，return了一个比较函数的返回值，看样子是Buf1只要和Str相等返回值就为1了，emm，看看返回值有啥用，sub_599540交叉引用一下，来到这里</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">void __thiscall sub_5A1080(CWnd *this)</span><br><span class="line">&#123;</span><br><span class="line">  void *v1; // esp</span><br><span class="line">  int v2; // eax</span><br><span class="line">  int v3; // eax</span><br><span class="line">  const WCHAR *v4; // eax</span><br><span class="line">  LPCWSTR lpText; // [esp+18h] [ebp-18Ch]</span><br><span class="line">  char *lpCaption; // [esp+1Ch] [ebp-188h]</span><br><span class="line">  const WCHAR *lpCaptiona; // [esp+1Ch] [ebp-188h]</span><br><span class="line">  CHAR v8[4]; // [esp+20h] [ebp-184h] BYREF</span><br><span class="line">  _RTC_ALLOCA_NODE *PAllocaInfoList; // [esp+12Ch] [ebp-78h]</span><br><span class="line">  unsigned int v10; // [esp+138h] [ebp-6Ch]</span><br><span class="line">  char *Str; // [esp+144h] [ebp-60h]</span><br><span class="line">  int v12; // [esp+150h] [ebp-54h]</span><br><span class="line">  wchar_t *String; // [esp+15Ch] [ebp-48h]</span><br><span class="line">  UINT CodePage; // [esp+168h] [ebp-3Ch]</span><br><span class="line">  int v15; // [esp+174h] [ebp-30h]</span><br><span class="line">  char v16[12]; // [esp+180h] [ebp-24h] BYREF</span><br><span class="line">  CWnd *v17; // [esp+18Ch] [ebp-18h]</span><br><span class="line">  int v18; // [esp+1A0h] [ebp-4h]</span><br><span class="line"></span><br><span class="line">  v17 = this;</span><br><span class="line">  PAllocaInfoList = 0;</span><br><span class="line">  if ( NtCurrentPeb()-&gt;BeingDebugged )</span><br><span class="line">    sub_56F206();</span><br><span class="line">  sub_57BDA8(4u);</span><br><span class="line">  sub_573856(v16);</span><br><span class="line">  v18 = 0;</span><br><span class="line">  CWnd::GetDlgItem(v17, 1000);</span><br><span class="line">  CWnd::GetWindowTextW(v16);</span><br><span class="line">  v15 = 0;</span><br><span class="line">  CodePage = sub_573608();</span><br><span class="line">  v12 = 0;</span><br><span class="line">  String = (wchar_t *)sub_5773F2(v16);</span><br><span class="line">  if ( String )</span><br><span class="line">  &#123;</span><br><span class="line">    v15 = j__wcslen(String) + 1;</span><br><span class="line">    if ( v15 &lt;= 0x3FFFFFFF )</span><br><span class="line">    &#123;</span><br><span class="line">      v1 = alloca(2 * v15 + 36);</span><br><span class="line">      lpText = (LPCWSTR)sub_5717A9(v8, String, 2 * v15, CodePage);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">      lpText = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    lpCaption = (char *)lpText;</span><br><span class="line">  &#125;</span><br><span class="line">  else</span><br><span class="line">  &#123;</span><br><span class="line">    lpCaption = 0;</span><br><span class="line">  &#125;</span><br><span class="line">  Str = lpCaption;</span><br><span class="line">  v10 = j__strlen(lpCaption) &gt;&gt; 1;</span><br><span class="line">  if ( sub_57378E(lpCaption, v10) &amp;&amp; (unsigned __int8)sub_56D4B0(&amp;Str[v10], v10) )</span><br><span class="line">  &#123;</span><br><span class="line">    v2 = sub_5768A8(&amp;unk_87989C);</span><br><span class="line">    lpCaptiona = (const WCHAR *)sub_57007A(v2);</span><br><span class="line">    v3 = sub_57086D(aFlag);</span><br><span class="line">    v4 = (const WCHAR *)sub_5782F2(v3);</span><br><span class="line">    sub_579328(v4, lpCaptiona, 0);</span><br><span class="line">  &#125;</span><br><span class="line">  v18 = -1;</span><br><span class="line">  sub_57A8E5(v16);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们刚刚的返回值就在最后那个if里，返回值为1才会执行里面的操作，if里的第三行好像就显示falg正确（aflag里存的是flag正确），那现在我们要做的就是，分析sub_57378E（）和sub_56D4B0()这两个函数就行<br>（看样子是把字符串分成两部分了，v10&gt;&gt;1<br>先分析第一部分：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">bool __cdecl sub_599540(char *a1, unsigned int a2)</span><br><span class="line">&#123;</span><br><span class="line">  size_t v2; // eax</span><br><span class="line">  char v4; // [esp+Fh] [ebp-141h]</span><br><span class="line">  char Buf1[68]; // [esp+D4h] [ebp-7Ch] BYREF</span><br><span class="line">  unsigned int i; // [esp+118h] [ebp-38h]</span><br><span class="line">  int v7[8]; // [esp+124h] [ebp-2Ch] BYREF</span><br><span class="line">  __int16 v8; // [esp+144h] [ebp-Ch]</span><br><span class="line">  char v9; // [esp+146h] [ebp-Ah]</span><br><span class="line"></span><br><span class="line">  memset(v7, 0, sizeof(v7));</span><br><span class="line">  v8 = 0;</span><br><span class="line">  v9 = 0;</span><br><span class="line">  for ( i = 0; i &lt; a2; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    v4 = *a1++;</span><br><span class="line">    *((_BYTE *)v7 + i) = v4;</span><br><span class="line">  &#125;</span><br><span class="line">  RC4((int)v7, a2);</span><br><span class="line">  ((void (__fastcall *)(char *, int *, unsigned int))byte_875188)(Buf1, v7, a2);</span><br><span class="line">  v2 = j__strlen(Str);</span><br><span class="line">  return j__memcmp(Buf1, Str, v2) == 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>经分析对密钥是有一个类似RC4操作的，密钥是<code>sorry_you_are_wrong</code>，然后先把这个SMC解了吧（</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">int sub_599C80()</span><br><span class="line">&#123;</span><br><span class="line">  int v0; // eax</span><br><span class="line">  int v1; // eax</span><br><span class="line">  int v2; // eax</span><br><span class="line">  int v3; // eax</span><br><span class="line">  unsigned int i; // [esp+118h] [ebp-54h]</span><br><span class="line">  size_t v6; // [esp+124h] [ebp-48h]</span><br><span class="line">  char *Str; // [esp+130h] [ebp-3Ch]</span><br><span class="line">  char v8[32]; // [esp+13Ch] [ebp-30h] BYREF</span><br><span class="line">  int v9; // [esp+168h] [ebp-4h]</span><br><span class="line"></span><br><span class="line">  v0 = sub_579EA4(&quot;i_will_not_be_found&quot;);</span><br><span class="line">  v1 = sub_5736A8(v0);</span><br><span class="line">  sub_5761A0(v1);</span><br><span class="line">  v9 = 0;</span><br><span class="line">  if ( !NtCurrentPeb()-&gt;BeingDebugged )</span><br><span class="line">  &#123;</span><br><span class="line">    v2 = sub_579EA4(&quot;you_can_not_find_me&quot;);</span><br><span class="line">    v3 = sub_5736A8(v2);</span><br><span class="line">    sub_56DE0B(v3);</span><br><span class="line">  &#125;</span><br><span class="line">  Str = (char *)sub_577203(v8);</span><br><span class="line">  v6 = j__strlen(Str);</span><br><span class="line">  for ( i = 0; i &lt; 0x292; ++i )</span><br><span class="line">    byte_875188[i] ^= Str[i % v6];</span><br><span class="line">  v9 = -1;</span><br><span class="line">  sub_571628(v8);</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from ida_bytes import *</span><br><span class="line">addr =0x875188</span><br><span class="line">key=&quot;you_can_not_find_me&quot;</span><br><span class="line">for i in range(0x292):</span><br><span class="line">    patch_byte(addr+i,get_byte(addr+i)^ord(key[i%len(key)]))</span><br></pre></td></tr></table></figure>
+<p>奇怪，解出来是这样的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">void __usercall sub_875231(int a1@&lt;edx&gt;, _BYTE *a2@&lt;ecx&gt;, int a3@&lt;ebp&gt;)</span><br><span class="line">&#123;</span><br><span class="line">  unsigned int v3; // edi</span><br><span class="line">  char v4; // bl</span><br><span class="line">  char v5; // dl</span><br><span class="line">  int v6; // ecx</span><br><span class="line">  _BYTE *v7; // eax</span><br><span class="line">  unsigned int v8; // ebx</span><br><span class="line">  char v9; // cl</span><br><span class="line">  unsigned int v10; // esi</span><br><span class="line">  char v11; // dl</span><br><span class="line">  char v12; // dl</span><br><span class="line">  char v13; // cl</span><br><span class="line">  char v14; // dl</span><br><span class="line">  char v15; // cl</span><br><span class="line"></span><br><span class="line">  v8 = *(_DWORD *)(a3 + 8);</span><br><span class="line">  v7 = a2;</span><br><span class="line">  v10 = 0;</span><br><span class="line">  *(_DWORD *)(a3 - 4) = a1;</span><br><span class="line">  v3 = v8 - 2;</span><br><span class="line">  *(_DWORD *)(a3 - 8) = a2;</span><br><span class="line">  if ( v8 != 2 )</span><br><span class="line">  &#123;</span><br><span class="line">    do</span><br><span class="line">    &#123;</span><br><span class="line">      v13 = *(_BYTE *)(a1 + v10);</span><br><span class="line">      v12 = v13 &amp; 3;</span><br><span class="line">      v9 = (v13 &gt;&gt; 2) &amp; 0x3F;</span><br><span class="line">      v11 = 16 * v12;</span><br><span class="line">      *v7 = v9 + 35;</span><br><span class="line">      v15 = *(_BYTE *)(*(_DWORD *)(a3 - 4) + v10 + 1);</span><br><span class="line">      v4 = v15 &amp; 0xF;</span><br><span class="line">      v5 = (v15 &gt;&gt; 4) &amp; 0xF | v11;</span><br><span class="line">      v6 = *(_DWORD *)(a3 - 4);</span><br><span class="line">      v7[1] = v5 + 35;</span><br><span class="line">      v14 = *(_BYTE *)(v6 + v10 + 2);</span><br><span class="line">      v10 += 3;</span><br><span class="line">      v7[2] = ((v14 &gt;&gt; 6) &amp; 3 | (4 * v4)) + 35;</span><br><span class="line">      v7[3] = (v14 &amp; 0x3F) + 35;</span><br><span class="line">      v7 += 4;</span><br><span class="line">      a1 = *(_DWORD *)(a3 - 4);</span><br><span class="line">    &#125;</span><br><span class="line">    while ( v10 &lt; v3 );</span><br><span class="line">    v8 = *(_DWORD *)(a3 + 8);</span><br><span class="line">  &#125;</span><br><span class="line">  if ( v10 &lt; v8 )</span><br><span class="line">    JUMPOUT(0x87540C);</span><br><span class="line">  JUMPOUT(0x875222);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>怎么只对了前一部分，啊，抓狂，不会了（<br>分析第二个函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">bool __cdecl sub_5996C0(char *a1, int a2)</span><br><span class="line">&#123;</span><br><span class="line">  __int64 v3; // rax</span><br><span class="line">  int v4; // [esp+10h] [ebp-144h]</span><br><span class="line">  char v5; // [esp+13h] [ebp-141h]</span><br><span class="line">  unsigned int j; // [esp+D8h] [ebp-7Ch]</span><br><span class="line">  unsigned __int64 v7; // [esp+E4h] [ebp-70h]</span><br><span class="line">  int v8; // [esp+ECh] [ebp-68h]</span><br><span class="line">  int v9; // [esp+F0h] [ebp-64h]</span><br><span class="line">  unsigned __int64 v10; // [esp+F4h] [ebp-60h]</span><br><span class="line">  unsigned __int64 v11; // [esp+FCh] [ebp-58h]</span><br><span class="line">  int v12[4]; // [esp+10Ch] [ebp-48h] BYREF</span><br><span class="line">  unsigned int i; // [esp+11Ch] [ebp-38h]</span><br><span class="line">  int v14[8]; // [esp+128h] [ebp-2Ch] BYREF</span><br><span class="line">  __int16 v15; // [esp+148h] [ebp-Ch]</span><br><span class="line">  char v16; // [esp+14Ah] [ebp-Ah]</span><br><span class="line">  char *v17; // [esp+15Ch] [ebp+8h]</span><br><span class="line"></span><br><span class="line">  v4 = *a1;</span><br><span class="line">  v17 = a1 + 1;</span><br><span class="line">  if ( v4 != 102 )</span><br><span class="line">    return 0;</span><br><span class="line">  memset(v14, 0, sizeof(v14));</span><br><span class="line">  v15 = 0;</span><br><span class="line">  v16 = 0;</span><br><span class="line">  for ( i = 0; i &lt; a2 - 1; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    v5 = *v17++;</span><br><span class="line">    *((_BYTE *)v14 + i) = v5;</span><br><span class="line">  &#125;</span><br><span class="line">  for ( j = 0; j &lt; 4; ++j )</span><br><span class="line">  &#123;</span><br><span class="line">    sub_5751B5((int)&amp;v14[2 * j], (int)v12);</span><br><span class="line">    TEA((int)v12, (int)&amp;dword_875048[4 * j]);</span><br><span class="line">    *((_DWORD *)&amp;v7 + 2 * j) = v12[0];</span><br><span class="line">    *((_DWORD *)&amp;v7 + 2 * j + 1) = 0;</span><br><span class="line">    LODWORD(v3) = *((_DWORD *)&amp;v7 + 2 * j);</span><br><span class="line">    HIDWORD(v3) = *((_DWORD *)&amp;v7 + 2 * j + 1);</span><br><span class="line">    v3 &lt;&lt;= 32;</span><br><span class="line">    *((_DWORD *)&amp;v7 + 2 * j) = v3;</span><br><span class="line">    *((_DWORD *)&amp;v7 + 2 * j + 1) = HIDWORD(v3);</span><br><span class="line">    HIDWORD(v3) = *((_DWORD *)&amp;v7 + 2 * j + 1);</span><br><span class="line">    *((_DWORD *)&amp;v7 + 2 * j) |= v12[1];</span><br><span class="line">    *((_DWORD *)&amp;v7 + 2 * j + 1) = HIDWORD(v3);</span><br><span class="line">  &#125;</span><br><span class="line">  return v8 == 798585087</span><br><span class="line">      &amp;&amp; v9 == -550095698</span><br><span class="line">      &amp;&amp; v7 &lt; v10</span><br><span class="line">      &amp;&amp; v10 &lt; v11</span><br><span class="line">      &amp;&amp; v10 - v7 == 4568540450738734457i64</span><br><span class="line">      &amp;&amp; v7 + v11 == 0x162F924623D2CAE0i64</span><br><span class="line">      &amp;&amp; v11 - v10 == 0x7C3C71F1B295D77Fi64;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这好像是个tea加密</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">unsigned int __fastcall sub_8754EF(unsigned int *a1, int *a2)</span><br><span class="line">&#123;</span><br><span class="line">  unsigned int v2; // esi</span><br><span class="line">  int v3; // ebx</span><br><span class="line">  unsigned int v4; // eax</span><br><span class="line">  int v5; // edi</span><br><span class="line">  int v6; // edx</span><br><span class="line">  unsigned int result; // eax</span><br><span class="line">  int v8; // ecx</span><br><span class="line">  unsigned int v9; // [esp-28h] [ebp-28h]</span><br><span class="line">  int v11; // [esp-14h] [ebp-14h]</span><br><span class="line">  int v12; // [esp-10h] [ebp-10h]</span><br><span class="line">  int v13; // [esp-Ch] [ebp-Ch]</span><br><span class="line">  int v14; // [esp-8h] [ebp-8h]</span><br><span class="line"></span><br><span class="line">  v2 = *a1;</span><br><span class="line">  v4 = a1[1];</span><br><span class="line">  v14 = *a2;</span><br><span class="line">  v8 = a2[1];</span><br><span class="line">  v12 = a2[2];</span><br><span class="line">  v3 = 32;</span><br><span class="line">  v11 = v8;</span><br><span class="line">  v13 = a2[3];</span><br><span class="line">  v5 = 0;</span><br><span class="line">  do</span><br><span class="line">  &#123;</span><br><span class="line">    v5 += 607369562;</span><br><span class="line">    v2 += (v5 + v4) ^ (v14 + 16 * v4) ^ (v8 + (v4 &gt;&gt; 5));</span><br><span class="line">    v6 = (v5 + v2) ^ (v12 + 16 * v2) ^ (v13 + (v2 &gt;&gt; 5));</span><br><span class="line">    v8 = v11;</span><br><span class="line">    v9 = v6 + v4;</span><br><span class="line">    --v3;</span><br><span class="line">    v4 += v6;</span><br><span class="line">  &#125;</span><br><span class="line">  while ( v3 );</span><br><span class="line">  result = v9;</span><br><span class="line">  *a1 = v2;</span><br><span class="line">  a1[1] = v9;</span><br><span class="line">  return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以试着解出后半段的flag</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdint.h&gt;</span><br><span class="line">int decrypto_Tea(uint32_t *a,uint32_t *key)</span><br><span class="line">&#123;</span><br><span class="line">  uint32_t v2 =*a;</span><br><span class="line">  uint32_t v4 =a[1],v14=*key,v8=key[1],v12=key[2],v13=key[3];</span><br><span class="line">  int v3 =32;</span><br><span class="line">  uint32_t v5 =0x86772b40;</span><br><span class="line">  do&#123;</span><br><span class="line">      v3--;</span><br><span class="line">      v4-=(v5 + v2) ^ (v12 + 16 * v2) ^ (v13 + (v2 &gt;&gt; 5));</span><br><span class="line">       v2 -= (v5 + v4) ^ (v14 + 16 * v4) ^ (v8 + (v4 &gt;&gt; 5));</span><br><span class="line">       v5 -= 0x2433B95A;</span><br><span class="line">  &#125;while(v3);</span><br><span class="line">  *a=v2;</span><br><span class="line">  a[1]=v4;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	uint32_t a[8]=&#123;0x2d46347f,0x5e79f6f4,0xDF3634AE,0x2F9970FF,0x6cacebd5,0x12c2fc6d,0xe8e95dc6,0xc558d3ec&#125;;</span><br><span class="line">  uint32_t key[16] =&#123;</span><br><span class="line">    0xD9610D02, 0x2AADA57D, 0xA37537F1, 0xC29E3913, 0xD5942CE8, 0x608CCE66, 0x6D593422, 0x21E5D6F2,</span><br><span class="line">    0xED3A9235, 0x9DAD62C4, 0x3856641B, 0x71F75B9D, 0xDCDEDAE8, 0xEAD2D1A0, 0xBAC4F564, 0xDA4772AC&#125;;</span><br><span class="line">for(int i=0,j=0;i&lt;8;i+=2,j+=4)</span><br><span class="line">&#123;</span><br><span class="line">  decrypto_Tea(&amp;a[i],&amp;key[j]);</span><br><span class="line">  printf(&quot;0x%x,&quot;,a[i]);</span><br><span class="line">  printf(&quot;0x%x,&quot;,a[i+1]);</span><br><span class="line">&#125;</span><br><span class="line">printf(&quot;\n&quot;);</span><br><span class="line"></span><br><span class="line">puts(a);</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br><span class="line">//f1cUlt_foR_THe_r0Ok1E_t0_REver5e</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/04/13/114/" data-id="clgf4bk9y00006ktthow6hqy2" data-title="114" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/04/13/X%60NUCA%202022%20unravelmfc%EF%BC%88wp)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/04/13/114/">114</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/13/X%60NUCA%202022%20unravelmfc%EF%BC%88wp)/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/10/X%E2%80%98NUCA%202020%20unravelmfc/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
